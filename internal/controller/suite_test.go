@@ -99,8 +99,6 @@ var _ = BeforeSuite(func() {
 	Expect(err).NotTo(HaveOccurred())
 	err = setupIndexExtensionToReferenceGrant(ctx, testMgr.GetFieldIndexer())
 	Expect(err).NotTo(HaveOccurred())
-	err = setupIndexMCPRegistrationToPrefix(ctx, testMgr.GetFieldIndexer())
-	Expect(err).NotTo(HaveOccurred())
 
 	// start the manager's cache
 	go func() {
